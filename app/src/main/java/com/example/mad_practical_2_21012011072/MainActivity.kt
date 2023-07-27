@@ -1,0 +1,50 @@
+package com.example.mad_practical_2_21012011072
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+
+class MainActivity : AppCompatActivity() {
+    val TAG = "MainActivity"
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        showMsg("onCreate method is called.")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        showMsg("onStart method is called.")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        showMsg("onResume method is called.")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        showMsg("onPause method is called.")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        showMsg("onStop method is called.")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        showMsg("onDestroy method is called.")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        showMsg("onRestart method is called.")
+    }
+    
+    fun showMsg(message: String) {
+        Log.i(TAG, message)
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+}
